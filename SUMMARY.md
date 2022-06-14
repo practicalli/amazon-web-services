@@ -7,6 +7,7 @@
 * [Overview](tools/index.md)
 * [AWS CLI](tools/aws-cli.md)
 * [AWS Vault](tools/aws-vault.md)
+* [Amazon Linux](tools/amazon-linux.md)
 * [Cognitect AWS tools](tools/aws-vault.md)
 * [Docker](tools/docker/index.md)
     * [AWS Images](tools/docker/aws-images.md)
