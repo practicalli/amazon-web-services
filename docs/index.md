@@ -12,7 +12,7 @@ Amazon web services are an ever increasing and evolving set of Cloud services to
 [Getting Started with AWS](https://aws.amazon.com/getting-started/){target=_blank .md-button}
 [AWS Developer Center](https://aws.amazon.com/developer/){target=_blank .md-button}
 [AWS Architecture Center](https://aws.amazon.com/architecture/){target=_blank .md-button}
-[Kindle Architecture white-papers](https://smile.amazon.co.uk/gp/product/B09KNY3GNR){target=_blank .md-button}
+[Kindle Architecture white-papers](https://www.amazon.co.uk/s?i=digital-text&rh=p_27%3AAmazon+Web+Services){target=_blank .md-button}
 
 
 ## Sponsor Practicalli
