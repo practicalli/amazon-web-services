@@ -12,10 +12,10 @@
 [![MegaLinter](https://github.com/practicalli/amazon-web-services/actions/workflows/megalinter.yaml/badge.svg)](https://github.com/practicalli/amazon-web-services/actions/workflows/megalinter.yaml)[![Publish Book](https://github.com/practicalli/amazon-web-services/actions/workflows/publish-book.yaml/badge.svg)](https://github.com/practicalli/amazon-web-services/actions/workflows/publish-book.yaml){target=_blank}
 [![pages-build-deployment](https://github.com/practicalli/amazon-web-services/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/practicalli/amazon-web-services/actions/workflows/pages/pages-build-deployment){target=_blank}
 
-[![Ideas & Issues](https://img.shields.io/github/issues/practicalli/amazon-web-services-practicalli-content?label=content%20ideas%20and%20issues&logoColor=green&style=for-the-badge)](https://github.com/practicalli/amazon-web-services-practicalli-content/issues){target=_blank}
-[![Pull requests](https://img.shields.io/github/issues-pr/practicalli/amazon-web-services-practicalli-content?style=for-the-badge)](https://github.com/practicalli/amazon-web-services-practicalli-content/pulls){target=_blank}
+[![Ideas & Issues](https://img.shields.io/github/issues/practicalli/amazon-web-services?label=content%20ideas%20and%20issues&logoColor=green&style=for-the-badge)](https://github.com/practicalli/amazon-web-services/issues){target=_blank}
+[![Pull requests](https://img.shields.io/github/issues-pr/practicalli/amazon-web-services?style=for-the-badge)](https://github.com/practicalli/amazon-web-services/pulls){target=_blank}
 
-![GitHub commit activity](https://img.shields.io/github/commit-activity/m/practicalli/amazon-web-services-practicalli-content?style=for-the-badge)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/practicalli/amazon-web-services?style=for-the-badge)
 ![GitHub contributors](https://img.shields.io/github/contributors/practicalli/amazon-web-services?style=for-the-badge&label=github%20contributors)
 
 
