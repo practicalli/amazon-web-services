@@ -51,7 +51,7 @@ Expressions in rich comment blocks can represent how to use the functions that m
 
 ![Practicalli Clojure Repl Driven Development - Rich comment blocks example](https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/practicalli-clojure-repl-driven-development-rich-comment-light.png)
 
-Rich comment blocks are very useful for rapidly iterating over different design decisions by including the same function but with different implementations.  Hide [clj-kondo linter](https://practical.li/clojure/clojure-cli/install/code-analysis.html){target=_blank} warnings for redefined vars (`def`, `defn`) when using this approach.
+Rich comment blocks are very useful for rapidly iterating over different design decisions by including the same function but with different implementations.  Hide [clj-kondo linter](https://practical.li/clojure/clojure-cli/projects/rich-comments/){target=_blank} warnings for redefined vars (`def`, `defn`) when using this approach.
 
 ```clojure
 ;; Rich comment block with redefined vars ignored
@@ -66,7 +66,7 @@ Rich comment blocks are very useful for rapidly iterating over different design 
   ) ;; End of rich comment block
 ```
 
-The "Rich" in the name is an honourary mention to Rich Hickey, the author and benevolent dictator of Clojure design.
+The "Rich" in the name is an honorary mention to Rich Hickey, the author and benevolent dictator of Clojure design.
 
 
 ## Design Journal
@@ -93,17 +93,9 @@ The design journal can be used to create meaningful documentation for the projec
 
 Pretty print shows the structure of results from function calls in a human-friendly form, making it easier for a developer to parse and more likely to notice incorrect results.
 
-++comma++ ++"e"++ ++"p"++ on the Spacemacs Clojure menu has several commands to Pretty Print data structure results when evaluating code.
-
-++comma++ ++"d"++ ++"v"++ is the Cider Inspect menu for paging through very large data sets and navigate nested data structures in detail.
-
 ![Clojure - viewing large data sets](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemace-clojure-inspect-java-lang-persistentvector.png)
 
-++comma++ ++"d"++ is the Cider debug menu which can inspect view intermediate values and data structures during the debugging of Clojure function calls.
-
-[Cider inspector](evaluating-clojure/inspect.md) is an effective way to navigate nested data and page through large data sets.
-
-[External data browsers](https://practical.li/clojure/clojure-tools/data-browsers/){target=_blank} can visualise data in many different forms.
+[External data browsers](https://practical.li/clojure/data-inspector/){target=_blank} can visualise data in many different forms.
 
 ![Portal - viewing Clojure data](https://raw.githubusercontent.com/practicalli/graphic-design/live/portal/portal-data-browser-example.png)
 
@@ -160,7 +152,7 @@ Test Driven Development (TDD) and REPL Driven Development (RDD) complement each 
 * RDD enables rapid design experiments so different approaches can easily and quickly be evaluated .
 * TDD focuses the results of the REPL experiments into design decisions, codified as unit tests.  These tests guide the correctness of specific implementations and provide critical feedback when changes break that design.
 
-[Unit tests](https://practical.li/clojure/testing/unit-testing/){target=_blank} should support the public API of each namespace in a project to help prevent regressions in the code.  Its far more efficient in terms of thinking time to define unit tests as the design starts to stabilize than as an after thought.
+[Unit tests](https://practical.li/clojure/testing/unit-testing/){target=_blank} should support the public API of each namespace in a project to help prevent regressions in the code.  Its far more efficient in terms of thinking time to define unit tests as the design starts to stabilise than as an after thought.
 
 `clojure.test` library is part of the Clojure standard library that provides a simple way to start writing unit tests.
 
@@ -169,7 +161,7 @@ Test Driven Development (TDD) and REPL Driven Development (RDD) complement each 
 Clojure has a number of [test runners](https://practical.li/clojure/testing/test-runners/){target=_blank} available.  Kaocha is a test runner that will run unit tests and function specification checks.
 
 !!! Hint "Automate local test runner"
-    Use [kaocha test runner](https://practical.li/clojure/testing/test-runners/kaocha-test-runner.html){target=_blank} in watch mode to run tests and specification check automatically (when changes are saved)
+    Use [kaocha test runner](https://practical.li/clojure/testing/test-runners/kaocha-test-runner/){target=_blank} in watch mode to run tests and specification check automatically (when changes are saved)
     ```bash
     clojure -X:test/watch
     ```
