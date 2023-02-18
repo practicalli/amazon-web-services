@@ -2,7 +2,7 @@
 # MegaLinter GitHub Action configuration file
 # https://megalinter.github.io
 
-name: MegaLinter
+name: MegaLinter New
 on:
   push:
     branches:
@@ -47,10 +47,8 @@ jobs:
           # MARKDOWN_MARKDOWN_LINK_CHECK_DISABLE_ERRORS: true
 
           MARKDOWN_REMARK_LINT_DISABLE_ERRORS: true
-
           # MARKDOWN_MARKDOWN_TABLE_FORMATTER_DISABLE_ERRORS: true
           #  - CLOJURE
           # CLOJURE_CLJ_KONDO_ARGUMENTS: '--lint deps.edn'
-
           # ADD CUSTOM ENV VARIABLES OR DEFINE IN A FILE .mega-linter.yml AT ROOT OF REPOSITORY
           # DISABLE: COPYPASTE,SPELL # Uncomment to disable copy-paste and spell checks
