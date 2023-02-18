@@ -2,7 +2,7 @@
 # MegaLinter GitHub Action configuration file
 # https://megalinter.github.io
 
-name: MegaLinter Check
+name: MegaLinter
 on:
   push:
     branches:
