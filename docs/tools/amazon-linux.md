@@ -1,4 +1,4 @@
-# Amazon Linux (2)
+# Amazon Linux
 
 https://aws.amazon.com/amazon-linux-2/
 
