@@ -12,33 +12,34 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Practical guide to Clojure programming language and Clojure REPL driven development" name="description"/>
 <meta content="Practicalli" name="author"/>
-<link href="https://practical.li/clojure/" rel="canonical"/>
-<link href="introduction/repl-workflow/" rel="next"/>
-<link href="assets/favicon.svg" rel="icon"/>
+<link href="https://practical.li/clojure/tools/aws-cli/" rel="canonical"/>
+<link href="../" rel="prev"/>
+<link href="../aws-vault/" rel="next"/>
+<link href="../../assets/favicon.svg" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.0.13" name="generator"/>
-<title>Practicalli Amazon Web Services (AWS) - Practicalli Clojure</title>
-<link href="assets/stylesheets/main.ffa9267a.min.css" rel="stylesheet"/>
-<link href="assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
+<title>AWS CLI - Practicalli Clojure</title>
+<link href="../../assets/stylesheets/main.ffa9267a.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-<link href="assets/stylesheets/extra.css" rel="stylesheet"/>
-<script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../assets/stylesheets/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-QZ22Z9DH4T"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-QZ22Z9DH4T",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-QZ22Z9DH4T",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
 <meta content="website" property="og:type"/>
-<meta content="Practicalli Amazon Web Services (AWS) - Practicalli Clojure" property="og:title"/>
+<meta content="AWS CLI - Practicalli Clojure" property="og:title"/>
 <meta content="Practical guide to Clojure programming language and Clojure REPL driven development" property="og:description"/>
-<meta content="https://practical.li/clojure/assets/images/social/index.png" property="og:image"/>
+<meta content="https://practical.li/clojure/assets/images/social/tools/aws-cli.png" property="og:image"/>
 <meta content="image/png" property="og:image:type"/>
 <meta content="1200" property="og:image:width"/>
 <meta content="630" property="og:image:height"/>
-<meta content="https://practical.li/clojure/" property="og:url"/>
+<meta content="https://practical.li/clojure/tools/aws-cli/" property="og:url"/>
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="Practicalli Amazon Web Services (AWS) - Practicalli Clojure" name="twitter:title"/>
+<meta content="AWS CLI - Practicalli Clojure" name="twitter:title"/>
 <meta content="Practical guide to Clojure programming language and Clojure REPL driven development" name="twitter:description"/>
-<meta content="https://practical.li/clojure/assets/images/social/index.png" name="twitter:image"/>
-<link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+<meta content="https://practical.li/clojure/assets/images/social/tools/aws-cli.png" name="twitter:image"/>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -49,14 +50,14 @@
                 body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
                 body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
                 body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-                </style><script src="assets/javascripts/glightbox.min.js"></script></head>
+                </style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="deep-orange" data-md-color-primary="orange" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#practicalli-amazon-web-services-aws">
+<a class="md-skip" href="#aws-command-line-interface-cli">
           Skip to content
         </a>
 </div>
@@ -81,8 +82,8 @@ so PR's are of limited value at present. Some page links &amp; images may be bro
 </div>
 <header class="md-header" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="Practicalli Clojure" class="md-header__button md-logo" data-md-component="logo" href="." title="Practicalli Clojure">
-<img alt="logo" src="assets/images/practicalli-logo.png"/>
+<a aria-label="Practicalli Clojure" class="md-header__button md-logo" data-md-component="logo" href="../.." title="Practicalli Clojure">
+<img alt="logo" src="../../assets/images/practicalli-logo.png"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
@@ -97,7 +98,7 @@ so PR's are of limited value at present. Some page links &amp; images may be bro
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Practicalli Amazon Web Services (AWS)
+              AWS CLI
             
           </span>
 </div>
@@ -163,8 +164,8 @@ so PR's are of limited value at present. Some page links &amp; images may be bro
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="Practicalli Clojure" class="md-nav__button md-logo" data-md-component="logo" href="." title="Practicalli Clojure">
-<img alt="logo" src="assets/images/practicalli-logo.png"/>
+<a aria-label="Practicalli Clojure" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="Practicalli Clojure">
+<img alt="logo" src="../../assets/images/practicalli-logo.png"/>
 </a>
     Practicalli Clojure
   </label>
@@ -179,76 +180,104 @@ so PR's are of limited value at present. Some page links &amp; images may be bro
 </a>
 </div>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_1" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index md-nav__link--active">
-<a href=".">Introduction</a>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../..">Introduction</a>
 <label for="__nav_1">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="true" aria-labelledby="__nav_1_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="false" aria-labelledby="__nav_1_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_1">
 <span class="md-nav__icon md-icon"></span>
           Introduction
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="introduction/repl-workflow/">
+<a class="md-nav__link" href="../../introduction/repl-workflow/">
         REPL Workflow
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="introduction/contributing/">
+<a class="md-nav__link" href="../../introduction/contributing/">
         Contributing
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="introduction/writing-tips/">
+<a class="md-nav__link" href="../../introduction/writing-tips/">
         Writing Tips
       </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="tools/">Tools</a>
+<a href="../">Tools</a>
 <label for="__nav_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_2">
 <span class="md-nav__icon md-icon"></span>
           Tools
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="tools/aws-cli/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          AWS CLI
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
         AWS CLI
       </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creating-profiles-for-environments">
+    Creating profiles for environments
+  </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="tools/aws-vault/">
+<a class="md-nav__link" href="#okta-single-sign-on">
+    Okta Single Sign-on
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#aws-shell">
+    AWS Shell
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../aws-vault/">
         AWS Vault
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="tools/amazon-linux/">
+<a class="md-nav__link" href="../amazon-linux/">
         Amazon Linux
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="tools/aws-vault/">
+<a class="md-nav__link" href="../aws-vault/">
         Cognitect AWS tools
       </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_2_6" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="tools/docker/">Docker</a>
+<a href="../docker/">Docker</a>
 <label for="__nav_2_6">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -260,12 +289,12 @@ so PR's are of limited value at present. Some page links &amp; images may be bro
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="tools/docker/aws-images.md">
+<a class="md-nav__link" href="../docker/aws-images.md">
         AWS Images
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="tools/docker/localstack/">
+<a class="md-nav__link" href="../docker/localstack/">
         Localstack
       </a>
 </li>
@@ -290,18 +319,18 @@ so PR's are of limited value at present. Some page links &amp; images may be bro
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#resources">
-    Resources
+<a class="md-nav__link" href="#creating-profiles-for-environments">
+    Creating profiles for environments
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#sponsor-practicalli">
-    Sponsor Practicalli
+<a class="md-nav__link" href="#okta-single-sign-on">
+    Okta Single Sign-on
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#creative-commons-license">
-    Creative commons license
+<a class="md-nav__link" href="#aws-shell">
+    AWS Shell
   </a>
 </li>
 </ul>
@@ -311,27 +340,43 @@ so PR's are of limited value at present. Some page links &amp; images may be bro
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="practicalli-amazon-web-services-aws">Practicalli Amazon Web Services (AWS)<a class="headerlink" href="#practicalli-amazon-web-services-aws" title="Permanent link">λ︎</a></h1>
-<p>Amazon web services are an ever increasing and evolving set of Cloud services to support a wide range of deployment requirements for custom software services.  AWS also includes a growing number of off-the-shelf services, especially in the realm of data science.</p>
-<blockquote>
-<p>Practicalli content focuses on tools and services the team has used for commercial projects, so will not cover all services offered</p>
-</blockquote>
-<h2 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">λ︎</a></h2>
-<p><a class="md-button" href="https://practical.li" target="_blank">Practicalli Books and Videos</a>
-<a class="md-button" href="https://youtube.co/practicalli" target="_blank">Practicalli YouTube channel</a>
-<a class="md-button" href="https://aws.amazon.com/getting-started/" target="_blank">Getting Started with AWS</a>
-<a class="md-button" href="https://aws.amazon.com/developer/" target="_blank">AWS Developer Center</a>
-<a class="md-button" href="https://aws.amazon.com/architecture/" target="_blank">AWS Architecture Center</a>
-<a class="md-button" href="https://www.amazon.co.uk/s?i=digital-text&amp;rh=p_27%3AAmazon+Web+Services" target="_blank">Kindle Architecture white-papers</a></p>
-<h2 id="sponsor-practicalli">Sponsor Practicalli<a class="headerlink" href="#sponsor-practicalli" title="Permanent link">λ︎</a></h2>
-<p><a href="https://github.com/sponsors/practicalli-john/" target="_blank"><img align="left" alt="Sponsor practicalli-john" loading="lazy" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/buttons/practicalli-github-sponsors-button.png"/></a></p>
-<p>The majority of my work is now focused on the <a href="https://practical.li/" target="_blank">Practicalli series of books and videos</a> and an advisory role with several communities</p>
-<p>Thank you to <a href="https://www.cognitect.com/" target="_blank">Cognitect</a>, <a href="https://nubank.com.br/" target="_blank">Nubank</a> and a wide range of other <a href="https://github.com/sponsors/practicalli-john#sponsors" target="_blank">sponsors</a> from the Clojure community for your continued support</p>
-<h2 id="creative-commons-license">Creative commons license<a class="headerlink" href="#creative-commons-license" title="Permanent link">λ︎</a></h2>
-<div style="width:95%; margin:auto;">
-<a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="license"><img alt="Creative Commons License" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" style="border-width:0"/></a>
-  This work is licensed under a Creative Commons Attribution 4.0 ShareAlike License (including images &amp; stylesheets).
+<h1 id="aws-command-line-interface-cli">AWS Command Line Interface - CLI<a class="headerlink" href="#aws-command-line-interface-cli" title="Permanent link">λ︎</a></h1>
+<p>The <a href="https://aws.amazon.com/cli/">AWS Command Line Interface (AWS CLI)</a> is a unified tool to manage your AWS services. With just one tool to download and configure, you can control multiple AWS services from the command line and automate them through scripts.</p>
+<div class="admonition example">
+<p class="admonition-title">Practicalli dotfiles .aws/config</p>
+<p><a href="https://github.com/practicalli/dotfiles/blob/main/aws/config">practicalli/dotfiles .aws/config file</a> is an example of an AWS Config with profiles and Okta single sign-on</p>
 </div>
+<h2 id="creating-profiles-for-environments">Creating profiles for environments<a class="headerlink" href="#creating-profiles-for-environments" title="Permanent link">λ︎</a></h2>
+<p>Software engineering teams should have the ability to deploy on at least a test and staging environment (with production typically kept for operations focused roles or teams).</p>
+<p>The AWS CLI can have multiple profiles with configuration specific to the environment.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1">## Default settings used with all profiles</span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="c1"># [default]</span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="c1"># region = eu-west-2</span>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="c1"># [profile test]</span>
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="c1"># role_arn = arn:aws:iam::************:role/Developer</span>
+<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="c1"># mfa_serial = arn:aws:iam::************:mfa/my.email@company-domain.com</span>
+<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="c1"># source_profile = default</span>
+<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a>
+<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="c1"># [profile staging]</span>
+<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="c1"># role_arn = arn:aws:iam::************:role/Developer</span>
+<a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="c1"># mfa_serial = arn:aws:iam::************:mfa/my.email@company-domain.com</span>
+<a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="c1"># source_profile = default</span>
+</code></pre></div>
+<h2 id="okta-single-sign-on">Okta Single Sign-on<a class="headerlink" href="#okta-single-sign-on" title="Permanent link">λ︎</a></h2>
+<p>Okta is a widely used Single Sign-on solution for managing access to business apps as well as Amazon Web Services (AWS) console and APIs.</p>
+<p>Define a profile (optional, but recommended) that contains the URL for the Okta single sign-on service and its authorisation endpoint.</p>
+<p>Define an <code>sso_region</code> that matches the AWS region in which the AWS profile should operate within.</p>
+<p>Add and <code>sso_account_id</code> and <code>sso_role_name</code> to define identity within AWS.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="o">[</span>profile<span class="w"> </span>domain-staging<span class="o">]</span>
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="nv">sso_start_url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>https://&lt;sso-domain&gt;.com/start
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="nv">sso_region</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>eu-west-2
+<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="nv">sso_account_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>&lt;arn:aws:iam<span class="w"> </span>value&gt;
+<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="nv">sso_role_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>PowerUserAccess
+<a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="nv">region</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>eu-west-2
+</code></pre></div>
+<h2 id="aws-shell">AWS Shell<a class="headerlink" href="#aws-shell" title="Permanent link">λ︎</a></h2>
 <hr/>
 <div class="md-source-file">
 <small>
@@ -387,7 +432,7 @@ so PR's are of limited value at present. Some page links &amp; images may be bro
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": ".", "features": ["announce.dismiss", "navigation.top", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.tracking", "navigation.indexes"], "search": "assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="assets/javascripts/bundle.2a6f1dda.min.js"></script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "navigation.top", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.tracking", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.2a6f1dda.min.js"></script>
 <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

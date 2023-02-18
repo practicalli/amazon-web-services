@@ -12,33 +12,34 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Practical guide to Clojure programming language and Clojure REPL driven development" name="description"/>
 <meta content="Practicalli" name="author"/>
-<link href="https://practical.li/clojure/" rel="canonical"/>
-<link href="introduction/repl-workflow/" rel="next"/>
-<link href="assets/favicon.svg" rel="icon"/>
+<link href="https://practical.li/clojure/introduction/contributing/" rel="canonical"/>
+<link href="../repl-workflow/" rel="prev"/>
+<link href="../writing-tips/" rel="next"/>
+<link href="../../assets/favicon.svg" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.0.13" name="generator"/>
-<title>Practicalli Amazon Web Services (AWS) - Practicalli Clojure</title>
-<link href="assets/stylesheets/main.ffa9267a.min.css" rel="stylesheet"/>
-<link href="assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
+<title>Contributing - Practicalli Clojure</title>
+<link href="../../assets/stylesheets/main.ffa9267a.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-<link href="assets/stylesheets/extra.css" rel="stylesheet"/>
-<script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../assets/stylesheets/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-QZ22Z9DH4T"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-QZ22Z9DH4T",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-QZ22Z9DH4T",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
 <meta content="website" property="og:type"/>
-<meta content="Practicalli Amazon Web Services (AWS) - Practicalli Clojure" property="og:title"/>
+<meta content="Contributing - Practicalli Clojure" property="og:title"/>
 <meta content="Practical guide to Clojure programming language and Clojure REPL driven development" property="og:description"/>
-<meta content="https://practical.li/clojure/assets/images/social/index.png" property="og:image"/>
+<meta content="https://practical.li/clojure/assets/images/social/introduction/contributing.png" property="og:image"/>
 <meta content="image/png" property="og:image:type"/>
 <meta content="1200" property="og:image:width"/>
 <meta content="630" property="og:image:height"/>
-<meta content="https://practical.li/clojure/" property="og:url"/>
+<meta content="https://practical.li/clojure/introduction/contributing/" property="og:url"/>
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="Practicalli Amazon Web Services (AWS) - Practicalli Clojure" name="twitter:title"/>
+<meta content="Contributing - Practicalli Clojure" name="twitter:title"/>
 <meta content="Practical guide to Clojure programming language and Clojure REPL driven development" name="twitter:description"/>
-<meta content="https://practical.li/clojure/assets/images/social/index.png" name="twitter:image"/>
-<link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+<meta content="https://practical.li/clojure/assets/images/social/introduction/contributing.png" name="twitter:image"/>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -49,14 +50,14 @@
                 body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
                 body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
                 body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-                </style><script src="assets/javascripts/glightbox.min.js"></script></head>
+                </style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="deep-orange" data-md-color-primary="orange" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#practicalli-amazon-web-services-aws">
+<a class="md-skip" href="#contributing-to-practicalli-clojure">
           Skip to content
         </a>
 </div>
@@ -81,8 +82,8 @@ so PR's are of limited value at present. Some page links &amp; images may be bro
 </div>
 <header class="md-header" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="Practicalli Clojure" class="md-header__button md-logo" data-md-component="logo" href="." title="Practicalli Clojure">
-<img alt="logo" src="assets/images/practicalli-logo.png"/>
+<a aria-label="Practicalli Clojure" class="md-header__button md-logo" data-md-component="logo" href="../.." title="Practicalli Clojure">
+<img alt="logo" src="../../assets/images/practicalli-logo.png"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
@@ -97,7 +98,7 @@ so PR's are of limited value at present. Some page links &amp; images may be bro
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Practicalli Amazon Web Services (AWS)
+              Contributing
             
           </span>
 </div>
@@ -163,8 +164,8 @@ so PR's are of limited value at present. Some page links &amp; images may be bro
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="Practicalli Clojure" class="md-nav__button md-logo" data-md-component="logo" href="." title="Practicalli Clojure">
-<img alt="logo" src="assets/images/practicalli-logo.png"/>
+<a aria-label="Practicalli Clojure" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="Practicalli Clojure">
+<img alt="logo" src="../../assets/images/practicalli-logo.png"/>
 </a>
     Practicalli Clojure
   </label>
@@ -181,8 +182,8 @@ so PR's are of limited value at present. Some page links &amp; images may be bro
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
 <input checked="" class="md-nav__toggle md-toggle" id="__nav_1" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index md-nav__link--active">
-<a href=".">Introduction</a>
+<div class="md-nav__link md-nav__link--index">
+<a href="../..">Introduction</a>
 <label for="__nav_1">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -194,17 +195,54 @@ so PR's are of limited value at present. Some page links &amp; images may be bro
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="introduction/repl-workflow/">
+<a class="md-nav__link" href="../repl-workflow/">
         REPL Workflow
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="introduction/contributing/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Contributing
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
         Contributing
       </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#book-status">
+    Book status
+  </a>
+<nav aria-label="Book status" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#submit-and-issue-or-idea">
+    Submit and issue or idea
+  </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="introduction/writing-tips/">
+<a class="md-nav__link" href="#considering-a-pull-request">
+    Considering a Pull request?
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#thank-you-to-everyone-that-has-contributed">
+    Thank you to everyone that has contributed
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../writing-tips/">
         Writing Tips
       </a>
 </li>
@@ -214,7 +252,7 @@ so PR's are of limited value at present. Some page links &amp; images may be bro
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="tools/">Tools</a>
+<a href="../../tools/">Tools</a>
 <label for="__nav_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -226,29 +264,29 @@ so PR's are of limited value at present. Some page links &amp; images may be bro
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="tools/aws-cli/">
+<a class="md-nav__link" href="../../tools/aws-cli/">
         AWS CLI
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="tools/aws-vault/">
+<a class="md-nav__link" href="../../tools/aws-vault/">
         AWS Vault
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="tools/amazon-linux/">
+<a class="md-nav__link" href="../../tools/amazon-linux/">
         Amazon Linux
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="tools/aws-vault/">
+<a class="md-nav__link" href="../../tools/aws-vault/">
         Cognitect AWS tools
       </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_2_6" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="tools/docker/">Docker</a>
+<a href="../../tools/docker/">Docker</a>
 <label for="__nav_2_6">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -260,12 +298,12 @@ so PR's are of limited value at present. Some page links &amp; images may be bro
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="tools/docker/aws-images.md">
+<a class="md-nav__link" href="../../tools/docker/aws-images.md">
         AWS Images
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="tools/docker/localstack/">
+<a class="md-nav__link" href="../../tools/docker/localstack/">
         Localstack
       </a>
 </li>
@@ -290,18 +328,27 @@ so PR's are of limited value at present. Some page links &amp; images may be bro
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#resources">
-    Resources
+<a class="md-nav__link" href="#book-status">
+    Book status
+  </a>
+<nav aria-label="Book status" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#submit-and-issue-or-idea">
+    Submit and issue or idea
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#sponsor-practicalli">
-    Sponsor Practicalli
+<a class="md-nav__link" href="#considering-a-pull-request">
+    Considering a Pull request?
   </a>
 </li>
+</ul>
+</nav>
+</li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#creative-commons-license">
-    Creative commons license
+<a class="md-nav__link" href="#thank-you-to-everyone-that-has-contributed">
+    Thank you to everyone that has contributed
   </a>
 </li>
 </ul>
@@ -311,27 +358,31 @@ so PR's are of limited value at present. Some page links &amp; images may be bro
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="practicalli-amazon-web-services-aws">Practicalli Amazon Web Services (AWS)<a class="headerlink" href="#practicalli-amazon-web-services-aws" title="Permanent link">λ︎</a></h1>
-<p>Amazon web services are an ever increasing and evolving set of Cloud services to support a wide range of deployment requirements for custom software services.  AWS also includes a growing number of off-the-shelf services, especially in the realm of data science.</p>
-<blockquote>
-<p>Practicalli content focuses on tools and services the team has used for commercial projects, so will not cover all services offered</p>
-</blockquote>
-<h2 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">λ︎</a></h2>
-<p><a class="md-button" href="https://practical.li" target="_blank">Practicalli Books and Videos</a>
-<a class="md-button" href="https://youtube.co/practicalli" target="_blank">Practicalli YouTube channel</a>
-<a class="md-button" href="https://aws.amazon.com/getting-started/" target="_blank">Getting Started with AWS</a>
-<a class="md-button" href="https://aws.amazon.com/developer/" target="_blank">AWS Developer Center</a>
-<a class="md-button" href="https://aws.amazon.com/architecture/" target="_blank">AWS Architecture Center</a>
-<a class="md-button" href="https://www.amazon.co.uk/s?i=digital-text&amp;rh=p_27%3AAmazon+Web+Services" target="_blank">Kindle Architecture white-papers</a></p>
-<h2 id="sponsor-practicalli">Sponsor Practicalli<a class="headerlink" href="#sponsor-practicalli" title="Permanent link">λ︎</a></h2>
-<p><a href="https://github.com/sponsors/practicalli-john/" target="_blank"><img align="left" alt="Sponsor practicalli-john" loading="lazy" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/buttons/practicalli-github-sponsors-button.png"/></a></p>
-<p>The majority of my work is now focused on the <a href="https://practical.li/" target="_blank">Practicalli series of books and videos</a> and an advisory role with several communities</p>
-<p>Thank you to <a href="https://www.cognitect.com/" target="_blank">Cognitect</a>, <a href="https://nubank.com.br/" target="_blank">Nubank</a> and a wide range of other <a href="https://github.com/sponsors/practicalli-john#sponsors" target="_blank">sponsors</a> from the Clojure community for your continued support</p>
-<h2 id="creative-commons-license">Creative commons license<a class="headerlink" href="#creative-commons-license" title="Permanent link">λ︎</a></h2>
-<div style="width:95%; margin:auto;">
-<a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="license"><img alt="Creative Commons License" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" style="border-width:0"/></a>
-  This work is licensed under a Creative Commons Attribution 4.0 ShareAlike License (including images &amp; stylesheets).
-</div>
+<h1 id="contributing-to-practicalli-clojure">Contributing to Practicalli Clojure<a class="headerlink" href="#contributing-to-practicalli-clojure" title="Permanent link">λ︎</a></h1>
+<p>How to effectivley contribute to Practicalli Clojure</p>
+<p><a href="https://github.com/practicalli/clojure/" target="_blank">practicalli/neovim</a> is written in markdown and uses MkDocs to generate the website via a GitHub action.</p>
+<p>By submitting content ideas and corrections you are agreeing they can be used in this book under the <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution ShareAlike 4.0 International license</a>.  Attribution will be detailed via <a href="https://github.com/practicalli/clojure/graphs/contributors" target="_blank">GitHub contributors</a>.</p>
+<p>All content and interaction with any persons or systems must be done so with respect and within the Practicalli Code of Conduct.</p>
+<h2 id="book-status">Book status<a class="headerlink" href="#book-status" title="Permanent link">λ︎</a></h2>
+<p><a href="https://github.com/practicalli/clojure/actions/workflows/megalinter.yaml"><img alt="MegaLinter" src="https://github.com/practicalli/clojure/actions/workflows/megalinter.yaml/badge.svg"/></a><a href="https://github.com/practicalli/clojure/actions/workflows/publish-book.yaml" target="_blank"><img alt="Publish Book" src="https://github.com/practicalli/clojure/actions/workflows/publish-book.yaml/badge.svg"/></a>
+<a href="https://github.com/practicalli/clojure/actions/workflows/pages/pages-build-deployment" target="_blank"><img alt="pages-build-deployment" src="https://github.com/practicalli/clojure/actions/workflows/pages/pages-build-deployment/badge.svg"/></a></p>
+<p><a href="https://github.com/practicalli/clojure-practicalli-content/issues" target="_blank"><img alt="Ideas &amp; Issues" src="https://img.shields.io/github/issues/practicalli/clojure-practicalli-content?label=content%20ideas%20and%20issues&amp;logoColor=green&amp;style=for-the-badge"/></a>
+<a href="https://github.com/practicalli/clojure-practicalli-content/pulls" target="_blank"><img alt="Pull requests" src="https://img.shields.io/github/issues-pr/practicalli/clojure-practicalli-content?style=for-the-badge"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://img.shields.io/github/commit-activity/m/practicalli/clojure-practicalli-content?style=for-the-badge"><img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/m/practicalli/clojure-practicalli-content?style=for-the-badge"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://img.shields.io/github/contributors/practicalli/clojure?style=for-the-badge&amp;label=github%20contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/practicalli/clojure?style=for-the-badge&amp;label=github%20contributors"/></a></p>
+<h3 id="submit-and-issue-or-idea">Submit and issue or idea<a class="headerlink" href="#submit-and-issue-or-idea" title="Permanent link">λ︎</a></h3>
+<p>If something doesnt seem quite right or something is missing from the book, please <a href="https://github.com/practicalli/clojure/issues" target="_blank">raise an issue via the GitHub repository</a> explaining in as much detail as you can.</p>
+<p>Raising an issue before creating a pull request will save you and the maintainer time.</p>
+<h3 id="considering-a-pull-request">Considering a Pull request?<a class="headerlink" href="#considering-a-pull-request" title="Permanent link">λ︎</a></h3>
+<p>Before investing any time in a pull request, please raise an issue explaining the situation.  This can save you and the maintainer time and avoid rejected pull requests.</p>
+<p>Please keep pull requests small and focused, as they are much quicker to review and easier to accept.  Ideally PR's should be for a specific page or at most a section.</p>
+<p>A PR with a list of changes across different sections will not be merged, it will be reviewed eventually though.</p>
+<h2 id="thank-you-to-everyone-that-has-contributed">Thank you to everyone that has contributed<a class="headerlink" href="#thank-you-to-everyone-that-has-contributed" title="Permanent link">λ︎</a></h2>
+<p>A huge thank you to Rich Hickey and the team at Cognitect for creating and continually guiding the Clojure language.  Special thank you to Alex Miller who has provided excellent advice on working with Clojure and the CLI tooling.</p>
+<p>The Clojure community has been highly supportive of everyone using Clojure and I'd like to thank everyone for the feedback and contributions.  I would also like to thank everyone that has joined in with the <a href="https://www.meetup.com/London-Clojurians/" target="_blank">London Clojurins community</a>, <a href="https://clojurebridgelondon.github.io/" target="_blank">ClojureBridgeLondon</a>, <a href="http://clojurians.net/" target="_blank">Clojurians Slack community</a>, <a href="https://clojurians.zulipchat.com/" target="_blank">Clojurians Zulip</a> community and <a href="https://clojureverse.org/" target="_blank">Clojureverse community</a>.</p>
+<p>Thank you to everyone who sponsors the Practicalli websites and videos and for the <a href="https://www.clojuriststogether.org/" target="_blank">Clojurists Together sponsorship</a>, it helps me continue the work at a much faster pace.</p>
+<p>Special thanks to <a href="https://twitter.com/otfrom" target="_blank">Bruce Durling</a> for getting me into Cloure in the first place.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://img.shields.io/github/contributors/practicalli/clojure?style=for-the-badge&amp;label=github%20contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/practicalli/clojure?style=for-the-badge&amp;label=github%20contributors"/></a></p>
 <hr/>
 <div class="md-source-file">
 <small>
@@ -387,7 +438,7 @@ so PR's are of limited value at present. Some page links &amp; images may be bro
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": ".", "features": ["announce.dismiss", "navigation.top", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.tracking", "navigation.indexes"], "search": "assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="assets/javascripts/bundle.2a6f1dda.min.js"></script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "navigation.top", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.tracking", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.2a6f1dda.min.js"></script>
 <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
