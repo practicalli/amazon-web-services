@@ -8,6 +8,9 @@ Docker works best on Linux, although should run on MacOSX and Windows, perhaps w
 
 Docker images can be pulled onto a local development environment and used or customised as needed.
 
+## Docker compose
+
+[Deploy applications on Amazon ECS using Docker Compose](https://aws.amazon.com/blogs/containers/deploy-applications-on-amazon-ecs-using-docker-compose/){target=_blank .md-button}
 
 
 ## Building Apps Locally
