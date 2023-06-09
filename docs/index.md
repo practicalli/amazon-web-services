@@ -31,12 +31,19 @@ Amazon web services are an ever increasing and evolving set of Cloud services to
 
 [Start Hacking](clojure/)
 
+
 ## Resources
 
 [Practicalli Books and Videos](https://practical.li){target=_blank .md-button}
 [Practicalli YouTube channel](https://youtube.co/practicalli){target=_blank .md-button}
+
 [Getting Started with AWS](https://aws.amazon.com/getting-started/){target=_blank .md-button}
 [AWS Developer Center](https://aws.amazon.com/developer/){target=_blank .md-button}
+
+[AWS Regions and Availability Zones map](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/){target=_blank .md-button}
+
+[AWS Region Names](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-available-regions){target=_blank .md-button}
+
 [AWS Architecture Center](https://aws.amazon.com/architecture/){target=_blank .md-button}
 [Kindle Architecture white-papers](https://www.amazon.co.uk/s?i=digital-text&rh=p_27%3AAmazon+Web+Services){target=_blank .md-button}
 
