@@ -23,15 +23,15 @@ LocalStack also provides additional features to make your life as a cloud develo
        / /   / __ \/ ___/ __ `/ /\__ \/ __/ __ `/ ___/ //_/
       / /___/ /_/ / /__/ /_/ / /___/ / /_/ /_/ / /__/ ,<
      /_____/\____/\___/\__,_/_//____/\__/\__,_/\___/_/|_|
-    
+
      💻 LocalStack CLI 1.4.0
-    
+
     [20:22:20] starting LocalStack in Docker mode 🐳
     [20:22:21] detaching
     ```
 
 === "Docker"
-    
+
     ```shell
     docker run --rm -it -p 4566:4566 -p 4510-4559:4510-4559 localstack/localstack
     ```
