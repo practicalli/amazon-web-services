@@ -131,6 +131,7 @@ nav:
   - Account:
       - account/index.md
       - account/root.md
+      - account/iam.md
   - Tools:
       - tools/index.md
       - AWS CLI: tools/aws-cli.md
