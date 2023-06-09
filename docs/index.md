@@ -4,6 +4,32 @@ Amazon web services are an ever increasing and evolving set of Cloud services to
 
 > Practicalli content focuses on tools and services the team has used for commercial projects, so will not cover all services offered
 
+??? HINT "Localstack provides AWS services locally"
+    Use [Localstack](https://docs.localstack.cloud/getting-started) instead of creating an account if only using the services locally.
+
+    Localstack [implements many of the AWS services](https://docs.localstack.cloud/references/coverage/), although some services are only commercially available
+
+
+## Getting Started
+
+=== "Personal projects"
+    [:fontawesome-solid-book-open: Setup Root and IAM accounts](accounts/)
+
+    - Find a valid credit / debit card needed to create the account (temporary $1 charge)
+    - Create a root account for to administer the overall AWS account
+    - Create an IAM account with Management Console login for working with AWS services
+    - Create an IAM account for services to access AWS (non-login)
+
+=== "Commercial projects"
+    Ask the AWS administrator within the organisation to create an IAM user fs
+
+    Specify the access required or identify a colleague that has the same AWS access required
+
+[:fontawesome-solid-book-open: Install AWS CLI version 2](/amazon-web-services/tools/aws-cli/)
+
+[:fontawesome-solid-book-open: Configure access via the IAM account](/amazon-web-services/tools/aws-cli/#create-local-configuration)
+
+[Start Hacking](clojure/)
 
 ## Resources
 
