@@ -149,3 +149,19 @@ nav:
   - Service:
       - service/index.md
       - service/simple-storage-solution.md
+  #     - Cloudwatch:
+  #       - services/cloudwatch/index.md
+  #       - Cloudwatch: services/cloudwatch/searching-logs.md
+  #       - mulog: services/cloudwatch/mulog.md
+  #     - Fargate: services/fargate/index.md
+  #     - Proton: services/proton/index.md
+  #     - DynamoDB: services/dynamodb/index.md
+  # - Integrations:
+  #     - integrations/index.md
+  #     - GitHub:
+  #         - integrations/github/index.md
+  #         - Actions: integrations/github/actions.md
+  # - Observability:
+  #     - observability/index.md
+  #     - Prometheus: observability/prometheus.md
+  #     - Graphana: observability/graphana.md
