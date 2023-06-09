@@ -128,6 +128,8 @@ nav:
       - REPL Workflow: introduction/repl-workflow.md
       - Contributing: introduction/contributing.md
       - Writing Tips: introduction/writing-tips.md
+  - Account:
+      - account/index.md
   - Tools:
       - tools/index.md
       - AWS CLI: tools/aws-cli.md
