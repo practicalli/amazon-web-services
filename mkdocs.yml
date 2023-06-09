@@ -146,3 +146,6 @@ nav:
       - clojure/index.md
       - Cognitect Labs AWS API: clojure/congnitect-labs-aws-api.md
       - Amazonica: clojure/amazonica.md
+  - Service:
+      - service/index.md
+      - service/simple-storage-solution.md
