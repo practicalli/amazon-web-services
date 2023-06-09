@@ -125,6 +125,7 @@ extra:
 nav:
   - Introduction:
       - index.md
+      - AWS Services: introduction/aws-services.md
       - REPL Workflow: introduction/repl-workflow.md
       - Contributing: introduction/contributing.md
       - Writing Tips: introduction/writing-tips.md
