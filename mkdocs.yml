@@ -130,6 +130,7 @@ nav:
       - Writing Tips: introduction/writing-tips.md
   - Account:
       - account/index.md
+      - account/root.md
   - Tools:
       - tools/index.md
       - AWS CLI: tools/aws-cli.md
