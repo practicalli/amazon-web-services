@@ -49,6 +49,8 @@ SPELL_MISSPELL_DISABLE_ERRORS: true
 # YAML_PRETTIER_FILTER_REGEX_EXCLUDE: (docs/)
 # YAML_YAMLLINT_FILTER_REGEX_EXCLUDE: (docs/)
 
+REPOSITORY_GITLEAKS_CONFIG_FILE: ".github/config/gitleaks.toml"
+
 # Explicitly disable linters to ensure they are never run
 # DISABLE:
 #   - COPYPASTE # checks for excessive copy-pastes
@@ -82,6 +84,7 @@ SHOW_ELAPSED_TIME: true
 
 # Upload reports to file.io
 FILEIO_REPORTER: false
+
 # ------------------------
 
 # ------------------------
