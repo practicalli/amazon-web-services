@@ -48,6 +48,21 @@ Amazon web services are an ever increasing and evolving set of Cloud services to
 [Kindle Architecture white-papers](https://www.amazon.co.uk/s?i=digital-text&rh=p_27%3AAmazon+Web+Services){target=_blank .md-button}
 
 
+## Navigate the book
+
+Use the mouse or built-in key bindings to navigate the pages of the book
+
+- ++p++ , ++comma++ : go to previous page
+- ++n++ , ++period++ : go to next page
+
+Use the search box to quickly find a specific topic
+
+- ++f++ , ++s++ , ++slash++ : open search dialog
+- ++arrow-down++ , ++arrow-up++ : select next / previous result
+- ++esc++ , ++tab++ : close search dialog
+- ++enter++ : follow selected result
+
+
 ## Sponsor Practicalli
 
 [![Sponsor practicalli-john](https://raw.githubusercontent.com/practicalli/graphic-design/live/buttons/practicalli-github-sponsors-button.png){align=left loading=lazy}](https://github.com/sponsors/practicalli-john/){target=_blank}
