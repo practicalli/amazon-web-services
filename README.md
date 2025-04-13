@@ -46,6 +46,12 @@ All sponsorship funds are used to support the continued development of [Practica
 
 Thanks to [Cognitect](https://www.cognitect.com/), [Nubank](https://nubank.com.br/) and a wide range of other [sponsors](https://github.com/sponsors/practicalli-johnny#sponsors) for your continued support
 
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=practicalli/amazon-web-services&type=Date)](https://star-history.com/#practicalli/amazon-web-services&Date)
+
+
 ## GitHub Actions
 
 The megalinter GitHub actions will run when a pull request is created,checking basic markdown syntax.
@@ -56,17 +62,18 @@ The Publish Book GitHub action will run when PR's are merged into main (or the P
 
 Publish book workflow installs Material for MkDocs version 9
 
+
 ## Local development
 
 Install mkdocs version 9 using the Python pip package manager
 
-```bash
-pip install mkdocs-material=="9.*"
+```shell
+pip install mkdocs-material=="9.5"
 ```
 
 Install the plugins used by the Practicalli site using Pip (these are also installed in the GitHub Action workflow)
 
-```bash
+```shell
 pip3 install mkdocs-material mkdocs-callouts mkdocs-glightbox mkdocs-git-revision-date-localized-plugin mkdocs-redirects pillow cairosvg
 ```
 
@@ -74,14 +81,23 @@ pip3 install mkdocs-material mkdocs-callouts mkdocs-glightbox mkdocs-git-revisio
 
 Fork the GitHub repository and clone that fork to your computer,
 
-```bash
+```shell
 git clone https://github.com/<your-github-account>/<repository>.git
 ```
 
 Run a local server from the root of the cloned project
 
-```bash
-mkdocs serve
+```shell
+make docs
 ```
 
 The website will open at <http://localhost:8000>
+
+If making smaller changes, then only rebuild the content that changes, speeding up the local development process
+
+```shell
+make docs-changed
+```
+
+> NOTE: navigation changes may not be correctly reflected without reloading the page in the web browser or carrying out a full `make docs` build
+
